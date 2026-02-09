@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
-import crystalGlow from "@/assets/crystal-glow.jpg";
+import crystalGlow from "@/assets/logo.jpeg";
 
 const CONTRACT_ADDRESS = "TOLY...MUBARAK1234567890abcdef";
 
@@ -22,7 +22,7 @@ const TokenSpiritSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-card">
+    <section id="token" className="section-padding bg-card">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

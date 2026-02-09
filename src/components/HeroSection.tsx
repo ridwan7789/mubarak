@@ -1,7 +1,4 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/characters-together.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.jpeg";
 
 const Star = ({ className, delay = 0 }: { className?: string; delay?: number }) => (
   <div
@@ -14,7 +11,7 @@ const Star = ({ className, delay = 0 }: { className?: string; delay?: number }) 
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -23,7 +20,7 @@ const HeroSection = () => {
           loop
           playsInline
           className="w-full h-full object-cover"
-          poster={heroBg}
+          poster="https://placehold.co/1920x1080/1a1a2e/ffffff?text=Toly+Mubarak"
         >
           <source src="/videos/toly-video-1.mp4" type="video/mp4" />
         </video>
@@ -46,9 +43,9 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <img src={logo} alt="Toly Mubarak logo" className="w-20 h-20 md:w-28 md:h-28 rounded-full mx-auto mb-4 glow-gold" />
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-4 leading-tight">
-            🌙 TOLY MUBARAK 🪙
+         
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-4 leading-tight flex items-center justify-center gap-4">
+            🌙 TOLY MUBARAK 
           </h1>
           <p className="text-lg md:text-xl text-gold-glow font-body font-medium tracking-wide mb-6">
             Fast in tech. Strong in community. Blessed in gains.
@@ -65,11 +62,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-10"
         >
-          <img
-            src={heroImg}
-            alt="Toly Mubarak characters holding gems together"
-            className="mx-auto w-72 md:w-96 rounded-2xl glow-gold animate-float-slow"
-          />
+         
         </motion.div>
 
         <motion.div

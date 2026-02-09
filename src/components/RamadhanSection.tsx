@@ -3,7 +3,7 @@ import characterMosque from "@/assets/character-mosque.jpg";
 
 const RamadhanSection = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section id="ramadhan" className="section-padding bg-secondary">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
