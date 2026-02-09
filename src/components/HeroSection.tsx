@@ -50,7 +50,6 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-4 leading-tight">
             🌙 TOLY MUBARAK 🪙
           </h1>
-          </h1>
           <p className="text-lg md:text-xl text-gold-glow font-body font-medium tracking-wide mb-6">
             Fast in tech. Strong in community. Blessed in gains.
           </p>
