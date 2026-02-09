@@ -14,10 +14,20 @@ const Star = ({ className, delay = 0 }: { className?: string; delay?: number }) 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-night-sky/60 to-transparent" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          poster={heroBg}
+        >
+          <source src="/videos/toly-video-1.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-night-sky/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-night-sky/80 via-transparent to-night-sky/30" />
       </div>
 
       {/* Floating stars */}

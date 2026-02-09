@@ -1,7 +1,19 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Copy, Check } from "lucide-react";
 import crystalGlow from "@/assets/crystal-glow.jpg";
 
+const CONTRACT_ADDRESS = "TOLY...MUBARAK1234567890abcdef";
+
 const TokenSpiritSection = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const principles = [
     { icon: "🕊️", text: "Fair launch" },
     { icon: "🔍", text: "No hidden mint" },
@@ -21,9 +33,40 @@ const TokenSpiritSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             Blessed in <span className="text-gradient-crystal">Gains</span>
           </h2>
-          <p className="text-muted-foreground italic mb-10 text-sm">
+          <p className="text-muted-foreground italic mb-8 text-sm">
             "Gains are welcomed, not chased."
           </p>
+
+          {/* Contract address copy */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mb-10"
+          >
+            <p className="text-xs font-body text-muted-foreground mb-2 uppercase tracking-widest">
+              Token Contract Address
+            </p>
+            <button
+              onClick={handleCopy}
+              className="inline-flex items-center gap-3 bg-background border border-border rounded-full px-5 py-3 hover:border-accent transition-colors group cursor-pointer"
+            >
+              <span className="font-mono text-xs md:text-sm text-foreground truncate max-w-[200px] md:max-w-none">
+                {CONTRACT_ADDRESS}
+              </span>
+              {copied ? (
+                <Check className="w-4 h-4 text-primary shrink-0" />
+              ) : (
+                <Copy className="w-4 h-4 text-muted-foreground group-hover:text-foreground shrink-0 transition-colors" />
+              )}
+            </button>
+            {copied && (
+              <p className="text-xs text-primary mt-2 font-body animate-fade-in">
+                Copied! Barakah in your clipboard ✨
+              </p>
+            )}
+          </motion.div>
 
           <div className="flex justify-center mb-12">
             <img

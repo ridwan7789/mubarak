@@ -3,7 +3,7 @@ import charactersTogether from "@/assets/characters-together.jpg";
 
 const CommunitySection = () => {
   return (
-    <section id="community" className="section-padding bg-secondary">
+    <section id="community" className="section-padding bg-secondary relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -31,6 +31,25 @@ const CommunitySection = () => {
               <p>We grow, protect, and celebrate together.</p>
             </div>
           </div>
+        </motion.div>
+
+        {/* Community video */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-16 flex justify-center"
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full max-w-2xl rounded-2xl glow-crystal"
+          >
+            <source src="/videos/toly-video-2.mp4" type="video/mp4" />
+          </video>
         </motion.div>
       </div>
     </section>
