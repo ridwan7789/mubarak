@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/characters-together.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const Star = ({ className, delay = 0 }: { className?: string; delay?: number }) => (
   <div
