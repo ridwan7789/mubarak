@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/characters-together.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const Star = ({ className, delay = 0 }: { className?: string; delay?: number }) => (
   <div
@@ -45,6 +46,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <img src={logo} alt="Toly Mubarak logo" className="w-20 h-20 md:w-28 md:h-28 rounded-full mx-auto mb-4 glow-gold" />
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground mb-4 leading-tight">
             🌙 TOLY MUBARAK 🪙
           </h1>
