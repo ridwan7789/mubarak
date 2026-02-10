@@ -14,10 +14,10 @@ const Footer = () => {
 
         {/* Social icons */}
         <div className="flex justify-center gap-6 mb-10">
-          <a href="https://x.com/tolymubarak" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm font-body font-medium">
+          <a href="https://x.com/MubarokToly" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm font-body font-medium">
             𝕏 Twitter
           </a>
-          <a href="https://t.me/Toly_Mubarak" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm font-body font-medium">
+          <a href="https://t.me/Mubarak_sol" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm font-body font-medium">
             ✈️ Telegram
           </a>
           <a href="https://Tolymubarak.fun" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-gold transition-colors text-sm font-body font-medium">
