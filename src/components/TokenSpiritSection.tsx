@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Copy, Check } from "lucide-react";
 import crystalGlow from "@/assets/logo.jpeg";
 
-const CONTRACT_ADDRESS = "COMMING SOON";
+const CONTRACT_ADDRESS = "3th2mF4zj5cfhVvgfh9gG2dPY5gFPRmN1ouJLaxnpump";
 
 const TokenSpiritSection = () => {
   const [copied, setCopied] = useState(false);
